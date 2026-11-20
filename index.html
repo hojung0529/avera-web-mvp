@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f8f3">
+  <title>아베라 AVERA | 두피 도포 웹 체험</title>
+  <meta name="description" content="기기 없이 경험하는 아베라. 예시 화면에서 정수리 위치를 찾고 가상 도포를 해본 뒤, 자동으로 남은 기록과 제품 개발 계획을 확인하세요.">
+  <meta property="og:title" content="아베라 | 도포 위치, 감 대신 화면으로 보면?">
+  <meta property="og:description" content="웹에서 한 지점을 골라 가상으로 도포하고, 내가 선택한 위치의 기록을 확인하세요.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 이동</a>
+<header class="header"><div class="shell nav">
+  <a class="wordmark" href="#top" aria-label="아베라 처음으로">ΛVERΛ</a>
+  <nav aria-label="주 메뉴"><a href="#experience">웹 체험</a><a href="#development">개발 계획</a><a href="#price">예상 비용</a></nav>
+  <a class="nav-cta" href="#experience">체험 시작</a>
+</div></header>
+<main id="main">
+  <section class="hero shell" id="top" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><i class="signal" aria-hidden="true"></i> 액상 미녹시딜 사용자를 위해 개발 중</p>
+      <h1 id="hero-title">매번 계량하고<br>바르기, <em>덜 번거롭게</em></h1>
+      <p class="lead">혼자서는 보이지 않는 정수리. 아베라는 위치를 보며 도포하고, 그 순간을 기록하는 기기를 개발합니다.</p>
+      <div class="hero-actions"><a class="btn primary" href="#experience">웹에서 써보기</a><a class="text-link" href="#development">개발 계획 살펴보기</a></div>
+    </div>
+    <figure class="product" data-view="angle" aria-labelledby="product-caption">
+      <div class="figure-top"><span>기기 외관</span><span id="view-count" aria-hidden="true">01 / 03</span></div>
+      <div class="stage-art" aria-hidden="true"><div class="orbit"></div><div class="orbit inner"></div></div>
+      <div class="device-wrap"><img id="device-image" width="677" height="269" src="device-angle.jpg" alt="비스듬히 본 은색 아베라 기기 콘셉트. 손잡이에 화면이 있다."></div>
+      <figcaption id="product-caption">개발 콘셉트 · 최종 외관 미확정</figcaption>
+      <div class="view-options" role="group" aria-label="기기 보기 각도">
+        <button type="button" data-view="angle" aria-pressed="true">사선</button><button type="button" data-view="front" aria-pressed="false">정면</button><button type="button" data-view="side" aria-pressed="false">측면</button>
+      </div>
+    </figure>
+  </section>
+  <section class="experience" id="experience" aria-labelledby="experience-title">
+    <div class="shell">
+      <div class="section-head"><div><p class="kicker">웹 시뮬레이션</p><h2 id="experience-title">도포 위치, 감 대신<br class="mobile-break"> 화면으로 보면?</h2></div>
+        <p>정수리 한 곳을 골라 가상으로 도포해 보세요.<br>방금 고른 위치와 시각이 기록에 함께 남습니다.</p></div>
+      <noscript><p>체험 순서: 예시 정수리에서 위치 선택 → 가상 도포 → 위치·시각 기록 조회. 버튼을 조작하려면 브라우저의 JavaScript를 켜주세요.</p></noscript>
+      <div class="console">
+        <div class="monitor">
+          <div class="monitor-bar"><span class="monitor-id">AVERA <b>/</b> VIEW</span><span>시뮬레이션 · 예시 이미지</span></div>
+          <div class="image-frame"><img src="crown.jpg" alt="두 지점을 골라 확대할 수 있는 AI 생성 정수리 예시" width="1254" height="1254">
+            <div class="frame-corners" aria-hidden="true"></div>
+            <div class="camera-loupe" id="camera-loupe" hidden aria-hidden="true"><div class="lens"></div><span id="zoom-caption"></span></div>
+            <div class="points" role="group" aria-label="정수리 위치 선택">
+              <button class="point" data-point="a" aria-label="A 정수리 왼쪽 선택" aria-pressed="false"><span>A</span></button>
+              <button class="point" data-point="b" aria-label="B 정수리 오른쪽 선택" aria-pressed="false"><span>B</span></button>
+            </div>
+          </div>
+          <div class="monitor-foot"><span>정수리 예시</span><span id="monitor-status">위치 선택 대기</span></div>
+        </div>
+        <div class="controls">
+          <ol class="steps" aria-label="체험 진행 단계"><li aria-current="step">위치 선택</li><li>가상 도포</li><li>기록 확인</li></ol>
+          <h3 id="task-title" tabindex="-1">어디에 도포해 볼까요?</h3>
+          <p id="task-desc">사진 속 A 또는 B를 눌러보세요. 선택한 지점의 두피 모습을 확대해 볼 수 있어요.</p>
+          <div id="live-detail" class="detail">
+            <div class="lens" aria-hidden="true"></div><div><small id="detail-label">확대 예시</small><strong id="detail-title">지점을 선택하세요</strong><span id="detail-note">선택한 위치가 여기에 표시됩니다.</span></div>
+          </div>
+          <div id="receipt" hidden>
+            <div class="receipt-head"><span class="check" aria-hidden="true">✓</span> 내 체험 기록</div>
+            <div class="receipt-main"><div class="lens" aria-hidden="true"></div><div><strong id="record-place"></strong><span id="record-time"></span></div></div>
+            <p>모의 작동 1회 · 예시 이미지</p>
+          </div>
+          <div class="control-actions"><button class="btn demo-btn" type="button" id="act" disabled>가상 도포</button><button type="button" class="reset" id="reset" hidden>다시 해보기</button></div>
+          <p class="session-note" id="session-note">로그인·카메라 권한 없이 체험할 수 있어요.</p>
+          <p class="sr-only" role="status" aria-live="polite" id="announce"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="shell info" id="development" aria-labelledby="development-title">
+    <p class="kicker">개발 계획</p><div class="info-grid"><div><h2 id="development-title">도포부터 기록까지,<br>무엇을 확인할까요?</h2><p class="sub">아베라는 기기와 연동 앱을 개발 중입니다.<br>2027년 6월 판매를 목표로 합니다.</p></div>
+    <dl class="spec"><div><dt>계량과 도포</dt><dd>설정량을 접촉 도포하는 구조를 개발합니다. 실제 토출량, 두피 전달량, 묻음과 정리 부담은 시제품으로 확인할 예정입니다.</dd></div><div><dt>화면과 위치</dt><dd>카메라로 보며 도포하고 부위를 인식하는 기능을 계획합니다. 초점, 모발 가림, 위치 인식 정확도를 검증합니다.</dd></div><div><dt>사진과 기록</dt><dd>사진과 기기 작동 이력을 한 건으로 묶는 것이 목표입니다. 기록 누락과 같은 부위 촬영의 재현성을 확인합니다.</dd></div><div><dt>광원</dt><dd>적색 기본 모드와 선택 광원을 계획합니다. 출력과 발열, 촬영 시 화면에 미치는 영향을 확인할 예정입니다.</dd></div></dl></div>
+  </section>
+  <section class="cost" id="price" aria-labelledby="price-title"><div class="shell"><p class="kicker">예상 비용</p><div class="info-grid"><div><h2 id="price-title">본체와 교체품,<br>미리 알아두세요.</h2><p class="sub">개발 단계의 가격 계획입니다.<br>약액은 별도이며 배송비는 착불입니다.</p></div>
+    <div class="cost-table"><div><span>본체</span><strong>240,000<small>원</small></strong></div><div><span>월 교체품 예시</span><strong>5,792<small>원</small></strong></div><p>카트리지 413원 × 4개 + 팁 69원 × 60개의 예시입니다. 실제 사용량에 따라 달라집니다.</p><p>사진·사용 이력·개인 통계는 무료 제공을 계획하고 있습니다.</p></div></div></div></section>
+  <section class="shell info faq" aria-labelledby="faq-title"><div class="info-grid"><div><h2 id="faq-title">자주 묻는 질문</h2></div><div>
+    <details><summary>내 두피 사진이나 기록이 전송되나요?</summary><p>체험에는 생성된 예시 이미지를 사용합니다. 위치와 시각은 현재 브라우저 탭에만 보관하며, ‘다시 해보기’를 누르면 체험 기록이 초기화됩니다.</p></details>
+    <details><summary>웹 체험으로 실제 도포량이나 효과를 알 수 있나요?</summary><p>화면에 표시하는 값은 모의 작동 횟수입니다. 실제 도포량, 편의성, 치료 효과는 이 체험으로 확인할 수 없습니다.</p></details>
+    <details><summary>지금 구매할 수 있나요?</summary><p>현재는 개발 중이며 판매 목표는 2027년 6월입니다. 약액 호환 범위, 세척법, 보증·교환 조건은 확정 후 안내할 예정입니다.</p></details>
+  </div></div></section>
+</main>
+<footer><div class="shell footer"><a href="#top" class="wordmark" aria-label="아베라 처음으로">ΛVERΛ</a><span>아베라 · 두피 도포 웹 체험</span><a href="#experience">웹 체험으로</a></div></footer>
+</body></html>
