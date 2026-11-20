@@ -3,30 +3,31 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#070b11">
-  <title>AVERA | ESP32 두피 도포 시뮬레이터</title>
-  <meta name="description" content="두피에서 한 지점을 선택하고 아베라 ESP32 화면을 조작해 보세요. 포인트·연속 모드, 가상 도포, 위치별 기록을 기기 없이 체험합니다.">
-  <meta property="og:title" content="AVERA | ESP32 두피 도포 시뮬레이터">
-  <meta property="og:description" content="두피 영상과 컨트롤러를 한 화면에서. 아베라의 도포 경험을 웹에서 직접 써보세요.">
+  <title>랩시스 LABSYS | 아베라 AVERA 두피 도포 기기</title>
+  <meta name="description" content="랩시스가 개발 중인 두피 도포 기기 아베라(AVERA)를 소개합니다. 가상 두피에서 위치를 고르고 ESP32 컨트롤러로 도포와 기록을 체험해 보세요.">
+  <meta property="og:site_name" content="랩시스 LABSYS">
+  <meta property="og:title" content="랩시스 | 아베라 두피 도포 기기">
+  <meta property="og:description" content="랩시스의 아베라를 웹에서 만나보세요. 두피에서 위치를 선택하고 기기 조작부터 도포 기록까지 직접 체험할 수 있습니다.">
   <meta property="og:image" content="https://hojung0529.github.io/avera-web-mvp/hardware-studio.jpg">
-  <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=2">
+  <link rel="icon" href="favicon.svg?v=3" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=3">
   <script src="app.js?v=2" defer></script>
 </head>
 <body id="top">
 <a class="skip" href="#main">본문으로 이동</a>
-<header><div class="shell nav"><a class="wordmark" href="#top" aria-label="아베라 처음으로">ΛVERΛ</a><nav aria-label="주 메뉴"><a href="#experience">시뮬레이터</a><a href="#development">개발 계획</a><a href="#price">예상 비용</a></nav><a class="nav-cta" href="#experience"><i aria-hidden="true"></i>체험 시작</a></div></header>
+<header><div class="shell nav"><a class="wordmark" href="#top" aria-label="랩시스 홈"><img src="labsys-logo.png" width="420" height="119" alt="랩시스 LABSYS"></a><nav aria-label="주 메뉴"><a href="#product">제품 소개</a><a href="#development">개발 계획</a><a href="#price">예상 비용</a></nav><a class="nav-cta" href="#experience"><i aria-hidden="true"></i>체험 시작</a></div></header>
 <main id="main">
-<section class="hero" aria-labelledby="hero-title"><div class="hero-in shell">
-  <div class="hero-copy"><p class="eyebrow"><span class="line"></span>두피 도포 기기 · 개발 콘셉트</p>
-  <h1 id="hero-title">매번 계량하고<br>바르기, <em>덜 번거롭게.</em></h1>
-  <p class="lead">도포 위치, 감 대신 화면으로 보면 어떨까요?<br>두피에서 한 곳을 고르고 아베라를 직접 조작해 보세요.</p>
-  <a class="btn primary" href="#experience"><span class="play" aria-hidden="true"></span>웹에서 써보기</a></div>
+<section class="hero" id="product" aria-labelledby="hero-title"><div class="hero-in shell">
+  <div class="hero-copy"><h1 id="hero-title"><img class="product-logo" src="avera-logo.png" width="640" height="158" alt="아베라 AVERA"><span class="sr-only"> 두피 도포 기기</span></h1>
+  <p class="hero-message">매번 계량하고<br>바르기, <em>덜 번거롭게.</em></p>
+  <p class="lead">아베라는 랩시스가 개발 중인 두피 도포 기기입니다.<br>두피에서 한 곳을 고르고 도포 과정을 직접 체험해 보세요.</p>
+  <a class="btn primary" href="#experience"><span class="play" aria-hidden="true"></span>아베라 체험하기</a></div>
   <figure class="product" data-view="angle"><div class="visual-surface"><img id="device-image" src="hardware-studio.jpg" width="1536" height="1024" fetchpriority="high" alt="청색 조명 아래 은색 아베라 기기를 비스듬히 본 개발 콘셉트 이미지"></div>
   <div class="fig-top"><span>AVERA <b>/</b> DEVICE VIEW</span><span id="view-count">01 / 03</span></div>
   <div class="fig-foot"><figcaption>외관 콘셉트</figcaption><div class="view-options" role="group" aria-label="기기 보기 각도"><button type="button" data-view="angle" aria-pressed="true">사선</button><button type="button" data-view="front" aria-pressed="false">정면</button><button type="button" data-view="side" aria-pressed="false">측면</button></div></div>
   </figure>
 </div></section>
 <section class="experience section shell" id="experience" aria-labelledby="sim-title">
-  <div class="section-head"><div><p class="eyebrow"><span class="line"></span>DEVICE SIMULATOR</p><h2 id="sim-title">두피를 보며, <em>직접 조작하세요.</em></h2></div><p>두피의 A 또는 B를 고른 뒤<br> 오른쪽 컨트롤러의 도포 키를 눌러보세요.</p></div>
+  <div class="section-head"><div><p class="eyebrow"><span class="line"></span>아베라 제품 체험</p><h2 id="sim-title">두피를 보며, <em>직접 조작하세요.</em></h2></div><p>두피의 A 또는 B를 고른 뒤<br> 오른쪽 컨트롤러의 도포 키를 눌러보세요.</p></div>
   <noscript>이 체험은 JavaScript를 사용합니다. 두피 위치를 선택한 뒤 포인트 또는 연속 모드로 가상 도포하면 위치와 시각이 기록됩니다.</noscript>
   <div class="console">
     <div class="monitor module">
@@ -42,7 +43,7 @@
       <div class="module-head"><h3>ESP32 컨트롤러</h3><span><i aria-hidden="true"></i> LOCAL SIM</span></div>
       <div class="controller-in">
       <div class="lcd" aria-label="아베라 ESP32 조작 화면">
-        <div class="lcd-top"><span class="link-chip" title="로컬 모의 화면">SIM</span><div class="modes" role="group" aria-label="도포 모드"><button type="button" data-mode="continuous" aria-pressed="true">연속모드</button><button type="button" data-mode="point" aria-pressed="false">포인트모드</button></div><b>AVERA</b></div>
+        <div class="lcd-top"><span class="link-chip" title="로컬 모의 화면">SIM</span><div class="modes" role="group" aria-label="도포 모드"><button type="button" data-mode="continuous" aria-pressed="true">연속모드</button><button type="button" data-mode="point" aria-pressed="false">포인트모드</button></div><img class="lcd-logo" src="avera-logo.png" width="640" height="158" alt="아베라 AVERA"></div>
         <div class="lcd-core">
           <button class="meter" type="button" id="gauge" aria-label="회차 누적 초기화"><span class="meter-face"><small id="plan-count">총 10회</small><strong id="amount">0.000</strong><small>누적 mL</small></span></button>
           <div class="settings" id="settings"><button type="button" data-setting="total"><span>총 도포량</span><b id="total-value">0.10 mL</b></button><button type="button" data-setting="step"><span>1포인트</span><b id="step-value">0.010 mL</b></button><button type="button" data-setting="interval"><span>도포 간격</span><b id="interval-value">0.5 s</b></button></div>
@@ -66,6 +67,6 @@
 <details><summary>실제 기기와 연결되나요?</summary><p>이 페이지의 ESP32 GUI는 브라우저에서 조작하는 모의 화면입니다. 터치 설정과 가상 작동을 체험할 수 있습니다.</p></details>
 <details><summary>지금 구매할 수 있나요?</summary><p>현재 개발 중입니다. 약액 호환 범위, 세척법, 보증·교환 조건은 확정 후 안내할 계획입니다.</p></details></div></section>
 </main>
-<footer><div class="shell footer"><a class="wordmark" href="#top" aria-label="아베라 처음으로">ΛVERΛ</a><span>아베라 · 웹 시뮬레이션</span><a href="#experience">다시 체험하기</a></div></footer>
+<footer><div class="shell footer"><a class="wordmark" href="#top" aria-label="랩시스 홈"><img src="labsys-logo.png" width="420" height="119" alt="랩시스 LABSYS"></a><span>랩시스 제품 소개 · 아베라</span><a href="#experience">다시 체험하기</a></div></footer>
 <dialog id="panel" aria-labelledby="panel-title"><div class="dialog-head"><h2 id="panel-title"></h2><button type="button" id="close-panel" aria-label="닫기">×</button></div><div id="panel-body"></div></dialog>
 </body></html>
